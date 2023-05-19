@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/my_image"
+        android:layout_width="248dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Eval_360" />
+
+    <TextView
+        android:id="@+id/Eval_360"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="92dp"
+        android:text="EVAL 360"
+        android:textColor="#394867"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_get_started"
+        android:layout_width="205dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#212A3E"
+        android:text="Get Started"
+
+        android:textColor="#F1F6F9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_image"
+        android:onClick="Login"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
