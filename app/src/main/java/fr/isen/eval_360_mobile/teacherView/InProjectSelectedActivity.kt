@@ -51,19 +51,19 @@ class InProjectSelectedActivity : AppCompatActivity(), GroupAdapter.OnItemClickL
 
 
 
-        binding.manageGroupButton.setOnClickListener{
-            val intent = Intent(this, GroupsManagerActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.deleteProjectButton.setOnClickListener {
-            val projectId = intent.getStringExtra("projectId")
-            if (projectId != null) {
-                val databaseRef = FirebaseDatabase.getInstance().getReference("Projets").child(projectId)
-                databaseRef.removeValue()
-                finish() // Ferme l'activité après la suppression du projet
-            }
-        }
+//        binding.manageGroupButton.setOnClickListener{
+//            val intent = Intent(this, GroupsManagerActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        binding.deleteProjectButton.setOnClickListener {
+//            val projectId = intent.getStringExtra("projectId")
+//            if (projectId != null) {
+//                val databaseRef = FirebaseDatabase.getInstance().getReference("Projets").child(projectId)
+//                databaseRef.removeValue()
+//                finish() // Ferme l'activité après la suppression du projet
+//            }
+//        }
 
     }
 

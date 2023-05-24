@@ -9,27 +9,27 @@
 
 
     <Button
-        android:id="@+id/buttonProjects"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="120dp"
-        android:backgroundTint="#E5F5EA"
-        android:text="@string/projects"
-        android:textColor="#596392"
-        app:layout_constraintBottom_toTopOf="@+id/cardView4"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
         android:id="@+id/buttonCreateProjects"
         android:layout_width="320dp"
         android:layout_height="180dp"
         android:layout_marginEnd="44dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="28dp"
         android:backgroundTint="#E5F5EA"
         android:text="@string/create_projects"
         android:textColor="#596392"
         app:layout_constraintBottom_toTopOf="@+id/buttonProjects"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonProjects"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="84dp"
+        android:backgroundTint="#E5F5EA"
+        android:text="@string/projects"
+        android:textColor="#596392"
+        app:layout_constraintBottom_toTopOf="@+id/cardView4"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView

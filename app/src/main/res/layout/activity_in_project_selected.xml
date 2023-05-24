@@ -34,44 +34,43 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/groupsRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="413dp"
+        android:layout_height="518dp"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/manageGroupButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <Button
-        android:id="@+id/manageGroupButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:textColor="#596392"
-        android:backgroundTint="#E5F5EA"
-        android:text="Manage Groups"
-        app:layout_constraintBottom_toTopOf="@+id/deleteProjectButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <Button-->
+<!--        android:id="@+id/manageGroupButton"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        android:layout_marginBottom="32dp"-->
+<!--        android:textColor="#596392"-->
+<!--        android:backgroundTint="#E5F5EA"-->
+<!--        android:text="Add Group"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/deleteProjectButton"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
-    <Button
-        android:id="@+id/deleteProjectButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="#E5F5EA"
-        android:text="Delete Project"
-        android:textColor="#596392"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <Button-->
+<!--        android:id="@+id/deleteProjectButton"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        android:layout_marginBottom="24dp"-->
+<!--        android:backgroundTint="#E5F5EA"-->
+<!--        android:text="Delete Project"-->
+<!--        android:textColor="#596392"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

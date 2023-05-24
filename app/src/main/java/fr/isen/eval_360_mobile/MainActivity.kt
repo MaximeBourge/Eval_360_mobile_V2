@@ -10,6 +10,7 @@ import fr.isen.eval_360_mobile.fragments.ScreenSlidePagerAdapter
 import fr.isen.eval_360_mobile.studentView.Eleve
 import fr.isen.eval_360_mobile.studentView.NotationEleveActivity
 import fr.isen.eval_360_mobile.teacherView.HomePageTeacherActivity
+import fr.isen.eval_360_mobile.teacherView.ProjectDetailsActivity
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -19,13 +20,13 @@ class MainActivity : AppCompatActivity() {
 
         val buttonStudent = findViewById<Button>(R.id.btn_get_student)
         buttonStudent.setOnClickListener {
-            val intent = Intent(this, HomePageTeacherActivity::class.java)
+            val intent = Intent(this, ProjectDetailsActivity::class.java)
             startActivity(intent)
         }
 
         val buttonTeacher = findViewById<Button>(R.id.btn_get_teacher)
         buttonTeacher.setOnClickListener {
-            val intent = Intent(this, Login::class.java)
+            val intent = Intent(this, Eleve::class.java)
             startActivity(intent)
         }
     }

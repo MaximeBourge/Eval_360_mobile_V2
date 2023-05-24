@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#026467"
     tools:context=".teacherView.ParametersOfGroupsActivity">
 
     <EditText
@@ -34,7 +35,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Name of group"
+        android:text="Name of the group"
+        android:textColor="@color/white"
+        android:typeface="serif"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
