@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         val buttonStudent = findViewById<Button>(R.id.btn_get_student)
         buttonStudent.setOnClickListener {
-            val intent = Intent(this, Eleve::class.java)
+            val intent = Intent(this, HomePageTeacherActivity::class.java)
             startActivity(intent)
         }
 
