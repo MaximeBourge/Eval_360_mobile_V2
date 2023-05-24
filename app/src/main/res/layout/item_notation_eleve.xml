@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:card_view="http://schemas.android.com/tools"
+    android:background="#026467"
     >
 
 <!--    <Button-->
@@ -32,6 +33,7 @@
         android:layout_height="500dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="76dp"
+        android:layout_marginEnd="28dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,9 +107,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
             android:layout_marginTop="55dp"
-            android:backgroundTint="#212A3E"
             android:text="Noter"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:textColor="#596392"
+            android:backgroundTint="#E5F5EA"/>
 
         <Button
             android:id="@+id/button2"
@@ -115,9 +118,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
             android:layout_marginTop="115dp"
-            android:backgroundTint="#212A3E"
             android:text="Noter"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:textColor="#596392"
+            android:backgroundTint="#E5F5EA"/>
 
         <Button
             android:id="@+id/button3"
@@ -125,9 +129,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
             android:layout_marginTop="175dp"
-            android:backgroundTint="#212A3E"
             android:text="Noter"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:textColor="#596392"
+            android:backgroundTint="#E5F5EA"/>
 
         <Button
             android:id="@+id/button4"
@@ -135,9 +140,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
             android:layout_marginTop="235dp"
-            android:backgroundTint="#212A3E"
             android:text="Noter"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:textColor="#596392"
+            android:backgroundTint="#E5F5EA"/>
 
         <Button
             android:id="@+id/seeMarkOfGroupButton"
@@ -145,9 +151,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
             android:layout_marginTop="295dp"
-            android:backgroundTint="#212A3E"
             android:text="Noter"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:textColor="#596392"
+            android:backgroundTint="#E5F5EA"/>
 
         <Button
             android:id="@+id/button6"
@@ -155,8 +162,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
             android:layout_marginTop="360dp"
-            android:backgroundTint="#212A3E"
             android:text="Noter"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:textColor="#596392"
+            android:backgroundTint="#E5F5EA"/>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

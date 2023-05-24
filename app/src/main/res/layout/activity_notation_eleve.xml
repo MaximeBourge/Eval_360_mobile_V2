@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NotationEleve"
-    android:background="#C1AEAE"
-    android:backgroundTint="#394867">
+
+    android:background="#026467">
 
 <!--    <androidx.cardview.widget.CardView-->
 <!--        android:layout_width="0dp"-->
@@ -119,15 +119,18 @@
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="100dp"
-        android:text="Notation :"
-        android:textColor="#F1F6F9"
-        android:textSize="28sp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="104dp"
+        android:text="Members of your group"
+
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
