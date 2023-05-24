@@ -17,7 +17,6 @@ class Register : AppCompatActivity() {
     private val inputEmail: EditText by lazy { findViewById(R.id.passwordLogIn) }
     private val inputusername: EditText by lazy { findViewById(R.id.emailLogIn) }
     private val inputpassword: EditText by lazy { findViewById(R.id.password) }
-    private val inputpassword2: EditText by lazy { findViewById(R.id.password2) }
     private val btn_sign_up by lazy { findViewById<Button>(R.id.btn_sign_up) }
     private val emailPattern = Regex(pattern = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")
     private val progressDialog by lazy { ProgressDialog(this) }
@@ -41,15 +40,13 @@ class Register : AppCompatActivity() {
     private fun performAuth() {
         val email = inputEmail.text.toString()
         val password = inputpassword.text.toString()
-        val password2 = inputpassword2.text.toString()
         val username = inputusername.text.toString()
 
         if (!email.matches(emailPattern)) {
             inputEmail.error = "Enter correct email"
         } else if (password.isEmpty() || password.length < 6) {
             inputpassword.error = "Enter proper password"
-        } else if (password != password2) {
-            inputpassword2.error = "Passwords do not match"
+
         } else {
             progressDialog.setMessage("Please wait while registering")
             progressDialog.setTitle("Registration")
