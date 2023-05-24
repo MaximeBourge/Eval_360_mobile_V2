@@ -28,8 +28,5 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
-
-        val viewPager = findViewById<ViewPager2>(R.id.infoCarousel)
-        viewPager.adapter = ScreenSlidePagerAdapter(this)
     }
 }
