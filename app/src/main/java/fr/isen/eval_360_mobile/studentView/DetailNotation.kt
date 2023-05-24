@@ -1,4 +1,4 @@
-package fr.isen.eval_360_mobile
+package fr.isen.eval_360_mobile.studentView
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import com.google.android.play.integrity.internal.f
+import fr.isen.eval_360_mobile.R
 
 class DetailNotation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

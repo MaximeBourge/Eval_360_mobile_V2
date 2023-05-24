@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
-import fr.isen.eval_360_mobile.DetailNotation
+import fr.isen.eval_360_mobile.studentView.DetailNotation
 
 import fr.isen.eval_360_mobile.R
 
@@ -48,12 +48,9 @@ class NameAdapter : RecyclerView.Adapter<NameAdapter.ViewHolder>() {
             view.findViewById(R.id.textView6)
         )
         val buttonList = listOf<Button>(
-            view.findViewById(R.id.button1),
-            view.findViewById(R.id.button2),
             view.findViewById(R.id.button3),
-            view.findViewById(R.id.button4),
             view.findViewById(R.id.seeMarkOfGroupButton),
-            view.findViewById(R.id.button6)
+            view.findViewById(R.id.buttonNoter)
         )
         init {
             Log.d("ViewHolder", "textViewList: $textViewList")

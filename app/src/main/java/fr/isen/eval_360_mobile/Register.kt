@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.database.FirebaseDatabase
+import fr.isen.eval_360_mobile.allclasse.User
 
 class Register : AppCompatActivity() {
 

@@ -85,7 +85,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/email_home_page"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonProjects" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_teacher" />
 
     <Button
         android:id="@+id/button5"

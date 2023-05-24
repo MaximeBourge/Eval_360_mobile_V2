@@ -4,7 +4,7 @@ import java.io.Serializable
 
 
 data class Group(
-    val id: String = "",
+    val groupid: String = "",
     val nomDuGroup: String = "",
     val students: List<Student> = emptyList()
 )  : Serializable

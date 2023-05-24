@@ -40,16 +40,16 @@
             android:name=".teacherView.CreateProjectActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailNotation"
+            android:name=".studentView.DetailNotation"
             android:exported="false" />
         <activity
             android:name=".allclasse.Project"
             android:exported="false" />
         <activity
-            android:name=".NotationEleve"
+            android:name=".studentView.NotationEleveActivity"
             android:exported="false" />
         <activity
-            android:name=".Eleve"
+            android:name=".studentView.Eleve"
             android:exported="false" />
         <activity
             android:name=".Register"

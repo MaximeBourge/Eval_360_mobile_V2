@@ -1,7 +1,8 @@
-package fr.isen.eval_360_mobile
+package fr.isen.eval_360_mobile.studentView
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import fr.isen.eval_360_mobile.R
 import fr.isen.eval_360_mobile.fragments.EleveFragment
 
 class Eleve : AppCompatActivity() {

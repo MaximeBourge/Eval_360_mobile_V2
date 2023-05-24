@@ -4,45 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#026467"
+    tools:context=".teacherView.HomePageTeacherActivity">
 
-    <ImageView
-        android:id="@+id/my_image"
-        android:layout_width="248dp"
-        android:layout_height="240dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="68dp"
-        android:src="@drawable/logo"
+    <Button
+        android:id="@+id/btn_get_student"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#E5F5EA"
+        android:text="Eleve"
+        android:textColor="#596392"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Eval_360" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_teacher" />
+
+    <Button
+        android:id="@+id/btn_get_teacher"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#E5F5EA"
+        android:text="Professeur"
+        android:textColor="#596392"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvaL" />
 
     <TextView
-        android:id="@+id/Eval_360"
+        android:id="@+id/textViewEvaL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="92dp"
-        android:text="EVAL 360"
-        android:textColor="#394867"
-        android:textSize="48sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Vous êtes ?"
+        android:textColor="#F9F9F9"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textViewEvaL360"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Eval 360"
+        android:textColor="#F9F9F9"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_get_started"
-        android:layout_width="205dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="68dp"
-        android:backgroundTint="#212A3E"
-        android:text="Get Started"
-
-        android:textColor="#F1F6F9"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_image"
-        android:onClick="Login"/>
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvaL360"
+        tools:srcCompat="@tools:sample/avatars" />
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/infoCarousel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEvaL"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvaL360" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
