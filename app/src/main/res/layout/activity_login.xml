@@ -24,7 +24,6 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="24dp"
 
-        android:fontFamily="@font/montserrat"
         android:text="@string/email"
         android:textColor="#596392"
         android:textSize="14sp"
@@ -48,9 +47,9 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/emailLogIn"
         android:layout_width="368dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:background="@drawable/textview_border"
-        android:fontFamily="@font/montserrat"
+
         android:hint="@string/email2"
 
         android:textColor="#000000"
@@ -65,9 +64,9 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/passwordLogIn"
         android:layout_width="368dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:background="@drawable/textview_border"
-        android:fontFamily="@font/montserrat"
+
 
         android:hint="@string/password2"
         android:textColor="#000000"
@@ -81,7 +80,6 @@
         android:id="@+id/Eval_360"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
         android:text="@string/teacher"
         android:textColor="#596392"
         android:textSize="48sp"
@@ -96,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
-        android:fontFamily="@font/montserrat"
+
         android:text="Don't you have an account yet ?"
         android:textColor="#596392"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,7 +108,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:backgroundTint="#596392"
-        android:fontFamily="@font/montserrat"
         android:text="@string/sign_in"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordLogIn" />
@@ -122,7 +119,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:fontFamily="@font/montserrat"
         android:text="@string/sign_up"
         android:textColor="#026467"
         android:textStyle="italic"
@@ -134,7 +130,7 @@
     <Button
         android:id="@+id/button9"
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="48dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
