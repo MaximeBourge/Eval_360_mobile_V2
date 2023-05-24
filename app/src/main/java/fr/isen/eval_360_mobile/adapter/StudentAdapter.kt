@@ -1,79 +1,42 @@
 package fr.isen.eval_360_mobile.adapter
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import fr.isen.eval_360_mobile.R
 import fr.isen.eval_360_mobile.allclasse.Student
+import fr.isen.eval_360_mobile.allclasse.StudentAdapterListener
 
-class StudentAdapter(private var students: List<Student>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-
-    private val VIEW_TYPE_STUDENT = 0
-    private val VIEW_TYPE_NOTATION_ELEVE = 1
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return when (viewType) {
-            VIEW_TYPE_STUDENT -> {
-                val view = LayoutInflater.from(parent.context).inflate(R.layout.item_student, parent, false)
-                StudentViewHolder(view)
-            }
-            VIEW_TYPE_NOTATION_ELEVE -> {
-                val view = LayoutInflater.from(parent.context).inflate(R.layout.item_notation_eleve, parent, false)
-                NotationEleveViewHolder(view)
-            }
-            else -> throw IllegalArgumentException("Invalid view type")
-        }
+class StudentAdapter(private var students: List<Student>,
+                     ) : RecyclerView.Adapter<StudentAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_student, parent, false)
+        return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when (holder.itemViewType) {
-            VIEW_TYPE_STUDENT -> {
-                val studentHolder = holder as StudentViewHolder
-                val student = students[position]
-                studentHolder.bind(student)
-            }
-            VIEW_TYPE_NOTATION_ELEVE -> {
-                val notationHolder = holder as NotationEleveViewHolder
-                val student = students[position]
-                notationHolder.bind(student)
-            }
-        }
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val student = students[position]
+        holder.bind(student)
     }
 
     override fun getItemCount() = students.size
 
-    override fun getItemViewType(position: Int): Int {
-        return if (position == 0) {
-            VIEW_TYPE_STUDENT
-        } else {
-            VIEW_TYPE_NOTATION_ELEVE
-        }
-    }
-
     fun setStudents(students: List<Student>) {
         this.students = students
         notifyDataSetChanged()
+        //listener?.onStudentDataChanged(students)
     }
 
-    inner class StudentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(student: Student) {
+            //Mettre ici, des "variables" à mettre dans la recyclerView
             itemView.findViewById<TextView>(R.id.textViewStudent).text = student.name
-        }
-    }
-
-    inner class NotationEleveViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val textViewNomEleve: TextView = itemView.findViewById(R.id.textViewNomEleveANoter)
-        private val buttonNoter: Button = itemView.findViewById(R.id.buttonNoter)
-
-        fun bind(student: Student) {
-            textViewNomEleve.text = student.name
-            buttonNoter.setOnClickListener {
-                // Gérer la logique pour rediriger vers "DetailNotationActivity"
-            }
+            //itemView.findViewById<TextView>(R.id.textViewMark).text = student.mark.toString()  --> mettre une textView "note/20"
         }
     }
 }
-

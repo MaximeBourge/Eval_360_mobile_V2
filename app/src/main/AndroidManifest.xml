@@ -46,7 +46,7 @@
             android:name=".allclasse.Project"
             android:exported="false" />
         <activity
-            android:name=".studentView.NotationEleveActivity"
+            android:name=".NotationEleve"
             android:exported="false" />
         <activity
             android:name=".studentView.Eleve"

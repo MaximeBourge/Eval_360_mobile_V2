@@ -10,7 +10,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import fr.isen.eval_360_mobile.studentView.NotationEleveActivity
+import fr.isen.eval_360_mobile.NotationEleve
 import fr.isen.eval_360_mobile.R
 
 class GroupAdapterAdrien : RecyclerView.Adapter<GroupAdapterAdrien.ViewHolder>() {
@@ -79,7 +79,7 @@ class GroupAdapterAdrien : RecyclerView.Adapter<GroupAdapterAdrien.ViewHolder>()
                 // Ajouter un listener pour démarrer l'activité de notation
                 button.setOnClickListener {
                     lastClickedButtonText = buttonText
-                    val intent = Intent(holder.itemView.context, NotationEleveActivity::class.java).apply {
+                    val intent = Intent(holder.itemView.context, NotationEleve::class.java).apply {
                         putExtra("buttonText", lastClickedButtonText)
                     }
                     holder.itemView.context.startActivity(intent)

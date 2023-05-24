@@ -48,9 +48,12 @@ class NameAdapter : RecyclerView.Adapter<NameAdapter.ViewHolder>() {
             view.findViewById(R.id.textView6)
         )
         val buttonList = listOf<Button>(
+            view.findViewById(R.id.button1),
+            view.findViewById(R.id.button2),
             view.findViewById(R.id.button3),
+            view.findViewById(R.id.button4),
             view.findViewById(R.id.seeMarkOfGroupButton),
-            view.findViewById(R.id.buttonNoter)
+            view.findViewById(R.id.button6)
         )
         init {
             Log.d("ViewHolder", "textViewList: $textViewList")

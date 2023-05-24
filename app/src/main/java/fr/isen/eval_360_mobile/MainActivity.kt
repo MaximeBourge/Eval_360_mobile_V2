@@ -5,11 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.viewpager2.widget.ViewPager2
-import fr.isen.eval_360_mobile.fragments.ScreenSlidePagerAdapter
 import fr.isen.eval_360_mobile.studentView.Eleve
-import fr.isen.eval_360_mobile.studentView.NotationEleveActivity
-import fr.isen.eval_360_mobile.teacherView.HomePageTeacherActivity
 import fr.isen.eval_360_mobile.teacherView.ProjectDetailsActivity
 
 class MainActivity : AppCompatActivity() {
