@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import fr.isen.eval_360_mobile.R
 import fr.isen.eval_360_mobile.adapter.GroupAdapterAdrien
 
-class EleveFragment : Fragment() {/*
+class EleveFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,5 +23,5 @@ class EleveFragment : Fragment() {/*
         return view
 
     }
-    */
+
 }

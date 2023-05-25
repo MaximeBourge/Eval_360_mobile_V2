@@ -14,8 +14,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Eval_360_mobile"
-        tools:targetApi="31"
-        android:usesCleartextTraffic="true">
+        tools:targetApi="31">
+        <activity
+            android:name=".Log_in_vfinal"
+            android:exported="false" />
         <activity
             android:name=".teacherView.MarkTeacherViewActivity"
             android:exported="false" />

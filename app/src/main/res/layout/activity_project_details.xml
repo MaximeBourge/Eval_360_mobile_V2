@@ -14,6 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Your Projects"
+        android:typeface="serif"
+        android:textSize="40sp"
         android:textColor="#F9F9F9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

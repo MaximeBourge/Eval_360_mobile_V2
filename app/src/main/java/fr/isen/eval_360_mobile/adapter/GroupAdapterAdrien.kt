@@ -10,7 +10,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import fr.isen.eval_360_mobile.studentView.NotationEleveActivity
+import fr.isen.eval_360_mobile.NotationEleve
 import fr.isen.eval_360_mobile.R
 
 class GroupAdapterAdrien : RecyclerView.Adapter<GroupAdapterAdrien.ViewHolder>() {
@@ -45,14 +45,11 @@ class GroupAdapterAdrien : RecyclerView.Adapter<GroupAdapterAdrien.ViewHolder>()
         })
     }
 
-
-
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val group1 = view.findViewById<Button>(R.id.group1)
         val group2 = view.findViewById<Button>(R.id.group2)
         val group3 = view.findViewById<Button>(R.id.group3)
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_vertical_group, parent, false)
@@ -60,8 +57,6 @@ class GroupAdapterAdrien : RecyclerView.Adapter<GroupAdapterAdrien.ViewHolder>()
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val buttonText = myDataset[position]
-
         // Masquer tous les boutons par défaut
         holder.group1.visibility = View.GONE
         holder.group2.visibility = View.GONE
@@ -77,13 +72,14 @@ class GroupAdapterAdrien : RecyclerView.Adapter<GroupAdapterAdrien.ViewHolder>()
 
             // Afficher le bouton si la position est valide
             if (position * 3 + i < myDataset.size) {
-                button.text = myDataset[position * 3 + i]
+                val buttonText = myDataset[position * 3 + i]
+                button.text = buttonText
                 button.visibility = View.VISIBLE
 
                 // Ajouter un listener pour démarrer l'activité de notation
                 button.setOnClickListener {
-                    lastClickedButtonText = button.text.toString()
-                    val intent = Intent(holder.itemView.context, NotationEleveActivity::class.java).apply {
+                    lastClickedButtonText = buttonText
+                    val intent = Intent(holder.itemView.context, NotationEleve::class.java).apply {
                         putExtra("buttonText", lastClickedButtonText)
                     }
                     holder.itemView.context.startActivity(intent)
@@ -95,5 +91,4 @@ class GroupAdapterAdrien : RecyclerView.Adapter<GroupAdapterAdrien.ViewHolder>()
     override fun getItemCount(): Int {
         return kotlin.math.ceil(myDataset.size / 3.0).toInt()
     }
-
 }
