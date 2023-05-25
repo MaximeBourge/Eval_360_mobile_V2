@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         val buttonTeacher = findViewById<Button>(R.id.btn_get_teacher)
         buttonTeacher.setOnClickListener {
-            val intent = Intent(this, HomePageTeacherActivity::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
 

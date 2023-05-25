@@ -12,6 +12,10 @@ import fr.isen.eval_360_mobile.adapter.ProjectAdapter
 import fr.isen.eval_360_mobile.allclasse.Group
 import fr.isen.eval_360_mobile.allclasse.Project
 import fr.isen.eval_360_mobile.allclasse.Student
+import java.io.BufferedReader
+import java.io.IOException
+import java.io.InputStream
+import java.io.InputStreamReader
 
 
 class ProjectDetailsActivity : AppCompatActivity(), ProjectAdapter.OnItemClickListener {
@@ -81,6 +85,9 @@ class ProjectDetailsActivity : AppCompatActivity(), ProjectAdapter.OnItemClickLi
 
         // Ajout de l'écouteur à la référence de la base de données
         databaseRef.addValueEventListener(projectListener)
+
+        // Utilisation de la bibliothèque Kivy pour exécuter le code Python
+        val pythonCode = loadPythonFile("python/api-teacherFirebase.py")
     }
 
 
@@ -97,5 +104,39 @@ class ProjectDetailsActivity : AppCompatActivity(), ProjectAdapter.OnItemClickLi
         // Ajoutez d'autres informations du projet si nécessaire
         startActivity(intent)
     }
+
+
+    // Fonction pour charger le contenu d'un fichier Python depuis les ressources
+    private fun loadPythonFile(fileName: String): String {
+        try {
+            // Obtenez le gestionnaire d'actifs (AssetManager)
+            val assetManager = assets
+
+            // Ouvrez le fichier Python
+            val inputStream: InputStream = assetManager.open(fileName)
+
+            // Lisez le contenu du fichier Python en utilisant un BufferedReader
+            val reader = BufferedReader(InputStreamReader(inputStream))
+            val stringBuilder = StringBuilder()
+            var line: String?
+            while (reader.readLine().also { line = it } != null) {
+                stringBuilder.append(line).append("\n")
+            }
+
+            // Fermez les flux
+            reader.close()
+            inputStream.close()
+
+            // Le contenu du fichier Python est maintenant dans stringBuilder
+            return stringBuilder.toString()
+
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+
+        return ""
+    }
+
+
 
 }
