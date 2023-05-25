@@ -5,7 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import fr.isen.eval_360_mobile.studentView.DetailNotation
 import fr.isen.eval_360_mobile.studentView.Eleve
+import fr.isen.eval_360_mobile.teacherView.HomePageTeacherActivity
 import fr.isen.eval_360_mobile.teacherView.ProjectDetailsActivity
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         val buttonTeacher = findViewById<Button>(R.id.btn_get_teacher)
         buttonTeacher.setOnClickListener {
-            val intent = Intent(this, Eleve::class.java)
+            val intent = Intent(this, NotationEleve::class.java)
             startActivity(intent)
         }
     }

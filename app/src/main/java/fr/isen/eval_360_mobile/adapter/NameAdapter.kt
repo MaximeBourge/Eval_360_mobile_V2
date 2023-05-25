@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import fr.isen.eval_360_mobile.studentView.DetailNotation
 
@@ -15,6 +16,7 @@ import fr.isen.eval_360_mobile.R
 class NameAdapter : RecyclerView.Adapter<NameAdapter.ViewHolder>() {
 
     private val myDataset = ArrayList<String>()
+    private val userIdList = ArrayList<String>()
 
     init {
         // Récupération des données de la table Firebase
@@ -25,13 +27,18 @@ class NameAdapter : RecyclerView.Adapter<NameAdapter.ViewHolder>() {
                 for (childSnapshot in dataSnapshot.children) {
                     val myString = childSnapshot.child("username").getValue(String::class.java)
                     Log.d("NameAdapter", "myString: $myString") // Ajout de la ligne de log
-                    myDataset.add(myString!!)
+                    myString?.let { myDataset.add(it) }
                 }
-
-
-                // Notification de l'adaptateur du changement de données
+                for (childSnapshot in dataSnapshot.children) {
+                    val userId = childSnapshot.key
+                    val username = childSnapshot.child("username").getValue(String::class.java)
+                    Log.d("NameAdapter", "userId: $userId, username: $username")
+                    userId?.let { userIdList.add(it) }
+                    username?.let { myDataset.add(it) }
+                }
                 notifyDataSetChanged()
             }
+
             override fun onCancelled(error: DatabaseError) {
                 // Gestion de l'erreur
             }
@@ -60,10 +67,12 @@ class NameAdapter : RecyclerView.Adapter<NameAdapter.ViewHolder>() {
         }
     }
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_notation_eleve, parent, false) as ViewGroup
+        val view = LayoutInflater.from(parent.context).inflate(
+            R.layout.item_notation_eleve,
+            parent,
+            false
+        ) as ViewGroup
         return ViewHolder(view)
     }
 
@@ -94,8 +103,40 @@ class NameAdapter : RecyclerView.Adapter<NameAdapter.ViewHolder>() {
                 val username = textView.text.toString()
                 intent.putExtra("USERNAME", username)
                 context.startActivity(intent)
-            }
+                val user = FirebaseAuth.getInstance().currentUser
+                val connectedUserId = user?.uid
+                val connectedUserName = user?.displayName
 
+                if (connectedUserId != null && connectedUserName != null && index >= 0 && index < myDataset.size) {
+                    val userToBeRatedId = userIdList[index]
+                    val userToBeRatedName = myDataset[index]
+
+                    val newTableReference = FirebaseDatabase.getInstance().getReference("notes")
+                    val newTable = newTableReference.push()
+
+                    val data = hashMapOf(
+                        "connectedUserId" to connectedUserId,
+                        "connectedUserName" to connectedUserName,
+                        "userToBeRatedId" to userToBeRatedId,
+                        "userToBeRatedName" to userToBeRatedName
+                    )
+
+                    newTable.setValue(data)
+                        .addOnSuccessListener {
+                            Log.d("NameAdapter", "Nouvelle table créée avec l'ID : ${newTable.key}")
+                        }
+                        .addOnFailureListener {
+                            Log.e(
+                                "NameAdapter",
+                                "Erreur lors de la création de la nouvelle table",
+                                it
+                            )
+                        }
+                } else {
+                    // Gérer le cas où connectedUserId est null, connectedUserName est null, ou index est invalide
+                }
+
+            }
         }
     }
 }
