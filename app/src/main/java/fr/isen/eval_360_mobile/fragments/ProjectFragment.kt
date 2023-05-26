@@ -17,7 +17,7 @@ class ProjectFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater?.inflate(R.layout.fragment_in_project_selected, container, false)
-        val verticalRecyclerView = view?.findViewById<RecyclerView>(R.id.vertical_recycler_view)
+        val verticalRecyclerView = view?.findViewById<RecyclerView>(R.id.recycler_view)
         if (verticalRecyclerView != null) {
             verticalRecyclerView.adapter = GroupAdapter()
         }
