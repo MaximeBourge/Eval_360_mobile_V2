@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#026467"
-    tools:context=".teacherView.InProjectSelectedActivity">
+    tools:context=".studentView.InProjectSelectedActivity">
 
     <TextView
         android:id="@+id/projectNameTextView"

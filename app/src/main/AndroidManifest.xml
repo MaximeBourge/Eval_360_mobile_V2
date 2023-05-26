@@ -28,7 +28,7 @@
             android:name=".teacherView.ListOfProjectTeacherView"
             android:exported="false" />
         <activity
-            android:name=".teacherView.InProjectSelectedActivity"
+            android:name=".studentView.InProjectSelectedActivity"
             android:exported="false" />
         <activity
             android:name=".teacherView.GroupsManagerActivity"

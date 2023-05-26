@@ -10,6 +10,7 @@ import fr.isen.eval_360_mobile.adapter.StudentAdapter
 import fr.isen.eval_360_mobile.allclasse.Group
 import fr.isen.eval_360_mobile.allclasse.Student
 import fr.isen.eval_360_mobile.databinding.ActivityGroupsManagerBinding
+import fr.isen.eval_360_mobile.studentView.InProjectSelectedActivity
 
 
 class GroupsManagerActivity : AppCompatActivity() {

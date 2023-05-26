@@ -11,6 +11,7 @@ import fr.isen.eval_360_mobile.adapter.ProjectAdapter
 import fr.isen.eval_360_mobile.allclasse.Group
 import fr.isen.eval_360_mobile.allclasse.Project
 import fr.isen.eval_360_mobile.allclasse.Student
+import fr.isen.eval_360_mobile.studentView.InProjectSelectedActivity
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStream
