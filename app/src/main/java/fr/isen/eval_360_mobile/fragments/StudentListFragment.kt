@@ -32,7 +32,7 @@ class StudentListFragment : Fragment(){
 
         adapter = StudentAdapter(
             listOf(
-                Student("1","Alicenhnnnnnnnnnnnnnn", "Alice@isen.yncrea.fr", 12),
+                Student("1","Alice", "Alice@isen.yncrea.fr", 12),
                 Student("1","Bon", "Bob@isen.yncrea.fr", 15),
                 Student("1","Yannis", "Bob@isen.yncrea.fr",9),
                 Student("1","Clement", "Bob@isen.yncrea.fr",8),

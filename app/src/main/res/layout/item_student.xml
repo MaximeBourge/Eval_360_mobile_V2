@@ -9,8 +9,9 @@
         android:id="@+id/textViewStudent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="64dp"
         android:text="TextView"
+        android:textColor="#596392"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,8 +21,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="68dp"
         android:text="a donné la note de : "
+        android:textColor="#596392"
         app:layout_constraintStart_toEndOf="@+id/textViewStudent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,8 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="64dp"
         android:text="TextView"
+        android:textColor="#ED0C0C"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView19"
         app:layout_constraintTop_toTopOf="parent" />
