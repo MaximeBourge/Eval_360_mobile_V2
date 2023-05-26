@@ -16,9 +16,6 @@
         android:theme="@style/Theme.Eval_360_mobile"
         tools:targetApi="31">
         <activity
-            android:name=".Log_in_vfinal"
-            android:exported="false" />
-        <activity
             android:name=".teacherView.MarkTeacherViewActivity"
             android:exported="false" />
         <activity
@@ -28,7 +25,7 @@
             android:name=".teacherView.HomePageTeacherActivity"
             android:exported="false" />
         <activity
-            android:name=".teacherView.ProjectDetailsActivity"
+            android:name=".teacherView.ListOfProjectTeacherView"
             android:exported="false" />
         <activity
             android:name=".teacherView.InProjectSelectedActivity"
@@ -37,25 +34,25 @@
             android:name=".teacherView.GroupsManagerActivity"
             android:exported="false" />
         <activity
-            android:name=".teacherView.CreateProjectActivity"
-            android:exported="false" />
-        <activity
             android:name=".studentView.DetailNotation"
             android:exported="false" />
         <activity
             android:name=".allclasse.Project"
             android:exported="false" />
         <activity
-            android:name=".studentView.NotationEleveActivity"
+            android:name=".studentView.Eleve"
             android:exported="false" />
         <activity
-            android:name=".studentView.Eleve"
+            android:name=".studentView.GroupStudent"
             android:exported="false" />
         <activity
             android:name=".Register"
             android:exported="false" />
         <activity
             android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".NotationEleve"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

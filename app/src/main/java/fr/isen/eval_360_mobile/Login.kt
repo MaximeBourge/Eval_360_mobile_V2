@@ -1,4 +1,5 @@
 package fr.isen.eval_360_mobile
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import fr.isen.eval_360_mobile.studentView.Eleve
+import fr.isen.eval_360_mobile.teacherView.HomePageTeacherActivity
 
 class Login : AppCompatActivity() {
 
@@ -23,7 +25,7 @@ class Login : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        val signUpText: TextView = findViewById(R.id.signInTextViewInLogInActivity)
+        val signUpText: TextView = findViewById(R.id.button2)
         signUpText.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
@@ -31,6 +33,10 @@ class Login : AppCompatActivity() {
 
         val buttonSignIn = findViewById<Button>(R.id.signInbuttonLogIn)
         buttonSignIn.setOnClickListener {
+            val intent = Intent(this, HomePageTeacherActivity::class.java) // Ligne à supprimer
+            startActivity(intent)// ligne à supprimer
+
+            /*
             val email = inputEmail.text.toString().trim()
             val password = inputpassword.text.toString().trim()
 
@@ -59,7 +65,7 @@ class Login : AppCompatActivity() {
                             ).show()
                         }
                     }
-            }
+            }*/
         }
     }
 }

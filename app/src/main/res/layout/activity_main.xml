@@ -9,10 +9,10 @@
 
     <Button
         android:id="@+id/btn_get_student"
-        android:layout_width="379dp"
+        android:layout_width="0dp"
         android:layout_height="173dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#E5F5EA"
         android:text="Eleve"
@@ -20,18 +20,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvaL" />
 
     <Button
         android:id="@+id/btn_get_teacher"
-        android:layout_width="378dp"
-        android:layout_height="160dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#E5F5EA"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#F9F9F9"
         android:text="Professeur"
         android:textColor="#596392"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,27 +44,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="8dp"
         android:text="Vous êtes ?"
         android:textColor="#F9F9F9"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_get_student"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
     <TextView
         android:id="@+id/textViewEvaL360"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
         android:text="Eval 360"
         android:textColor="#F9F9F9"
         android:textSize="60sp"
         android:typeface="serif"
-        app:layout_constraintBottom_toTopOf="@+id/cardView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -71,9 +69,10 @@
         android:id="@+id/cardView3"
         android:layout_width="413dp"
         android:layout_height="90dp"
-        android:layout_marginBottom="484dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvaL360">
 
         <ImageView
             android:id="@+id/imageView6"

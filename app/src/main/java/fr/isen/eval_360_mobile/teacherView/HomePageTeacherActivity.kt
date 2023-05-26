@@ -13,12 +13,7 @@ class HomePageTeacherActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonProjects.setOnClickListener{
-            val intent = Intent(this, ProjectDetailsActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.buttonCreateProjects.setOnClickListener{
-            val intent = Intent(this, CreateProjectActivity::class.java)
+            val intent = Intent(this, ListOfProjectTeacherView::class.java)
             startActivity(intent)
         }
     }

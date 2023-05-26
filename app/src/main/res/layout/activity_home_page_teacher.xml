@@ -8,41 +8,41 @@
     tools:context=".teacherView.HomePageTeacherActivity">
 
 
-    <Button
-        android:id="@+id/buttonCreateProjects"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="28dp"
-        android:backgroundTint="#E5F5EA"
-        android:text="@string/create_projects"
-        android:textColor="#596392"
-        app:layout_constraintBottom_toTopOf="@+id/buttonProjects"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#F9F9F9"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvaL360" />
 
     <Button
         android:id="@+id/buttonProjects"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginEnd="44dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="84dp"
         android:backgroundTint="#E5F5EA"
-        android:text="@string/projects"
+        android:text="Vos projets"
         android:textColor="#596392"
         app:layout_constraintBottom_toTopOf="@+id/cardView4"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
         android:id="@+id/textViewEvaL360"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="20dp"
-        android:text="Home page teacher"
+        android:text="Accueil Professeur -"
         android:textColor="#F9F9F9"
-        android:textSize="40sp"
+        android:textSize="34sp"
         android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
@@ -58,5 +58,49 @@
             android:layout_height="63dp"
             app:srcCompat="@drawable/logo" />
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Action"
+        android:textColor="#F9F9F9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Email: "
+        android:textColor="#F9F9F9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonProjects" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#F9F9F9"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/buttonProjects" />
+
+    <Button
+        android:id="@+id/buttonDeconnexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#cccccc"
+        android:text="Se déconnecter"
+        android:textColor="#596392"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

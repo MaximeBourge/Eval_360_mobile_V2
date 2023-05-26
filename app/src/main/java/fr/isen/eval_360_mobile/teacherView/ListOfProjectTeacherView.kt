@@ -2,7 +2,6 @@ package fr.isen.eval_360_mobile.teacherView
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,7 +17,7 @@ import java.io.InputStream
 import java.io.InputStreamReader
 
 
-class ProjectDetailsActivity : AppCompatActivity(), ProjectAdapter.OnItemClickListener {
+class ListOfProjectTeacherView : AppCompatActivity(), ProjectAdapter.OnItemClickListener {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var projectAdapter: ProjectAdapter
@@ -28,7 +27,7 @@ class ProjectDetailsActivity : AppCompatActivity(), ProjectAdapter.OnItemClickLi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_project_details)
+        setContentView(R.layout.activity_list_of_project_teacher_view)
 
         recyclerView = findViewById(R.id.RecyclerViewProjects)
         projectAdapter = ProjectAdapter(emptyList(), this)
