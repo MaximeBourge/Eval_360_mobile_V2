@@ -17,19 +17,20 @@
         android:backgroundTint="#E5F5EA"
         android:text="Eleve"
         android:textColor="#596392"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEvaL" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvaL"
+        app:layout_constraintVertical_bias="0.169" />
 
     <Button
         android:id="@+id/btn_get_teacher"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="173dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="64dp"
         android:backgroundTint="#F9F9F9"
         android:text="Professeur"
         android:textColor="#596392"
